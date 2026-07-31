@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Unidades</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Conversor de Unidades</h1>
+
+  <!-- controles: select, input, direccion y boton -->
+  <div class="controles">
+    <select id="tipo">
+      <option value="longitud">Longitud (metros - pies)</option>
+      <option value="peso">Peso (kilogramos - libras)</option>
+      <option value="temperatura">Temperatura (celsius - fahrenheit)</option>
+    </select>
+
+    <input type="number" id="valor" placeholder="Valor">
+
+    <label><input type="radio" name="direccion" value="ida" checked> &rarr;</label>
+    <label><input type="radio" name="direccion" value="vuelta"> &larr;</label>
+
+    <button id="btnConvertir">Convertir</button>
+  </div>
+
+  <!-- resultado de la ultima conversion -->
+  <p id="resultado"></p>
+
+  <h2>Historial</h2>
+  <p id="contador">0 conversiones</p>
+  <button id="btnLimpiar">Limpiar historial</button>
+
+  <!-- aqui el js pinta las tarjetas -->
+  <div id="historial"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
